@@ -36,5 +36,23 @@ function Registrar_admin(){
 });
 
   	}
+     function agregaProducto(){
+
+  	var nombre_pro = document.getElementById("nameProduc").value
+  	var pre_prod = document.getElementById("preProd").value
+
+  		  db.collection("Productos").add({
+
+    Name_Produc: nombre_pro,
+    Prec_prod: pre_prod,
+})
+.then(function(docRef) {
+    alert("El producto se agrego correctamente");
+})
+.catch(function(error) {
+    console.error("Error¡¡ ", error);
+});
+
+  	}
 
  }
